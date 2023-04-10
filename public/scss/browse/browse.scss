@@ -1,0 +1,120 @@
+.browseHero{
+    max-width: 100%;
+    min-height: 800px;
+    background-image: linear-gradient(rgb(167, 232, 189,.6),rgb(167, 232, 189,.6)), url(../images/recipe-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.browseTitle{
+    font-size: 25px;
+    font-family: CaveatB;
+    text-align: left;
+    margin-bottom: 50px;
+}
+.gallery-list{
+    width: 100%;
+    //background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+} 
+.gallery-event{
+    width: 55%;
+    height: 263px;      
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.gallery-image img{
+    width: 300px;
+    height: 263px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+.gallery-info{
+    min-width: 224px;
+    min-height: 100%;
+    border-radius: 24px;
+    background-color: white;
+}
+.gallery-details{
+    width: 130px;
+    height: 200px;
+    margin: 40px auto;
+   
+}
+.gallery-title{
+    font-size: 15px;
+    font-family: LatoR;
+    border-bottom: 3px solid black;
+    margin-bottom: 20px;
+}
+.gallery-desc{
+    font-family: LatoR;
+    font-size: 9px;
+    margin-bottom: 20px;
+}
+.timer{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .timer-image{
+        width: 23px;
+        height: 24px;
+        background-image: url(../images/time.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    p{
+    font-size: 10px;
+    font-family: LatoR;
+    }
+}
+ .servings{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .servings-image{
+        width: 23px;
+        height: 24px;
+        background-image: url(../images/servings.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    p{
+    font-size: 10px;
+    font-family: LatoR;
+    }
+ }
+ @media screen and (max-width:760px) {
+  .browseTitle{
+    text-align: center;
+  }
+  .gallery-list{
+    display: block;
+  }  
+  .gallery-event{
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+ 
+}
+@media screen and (max-width:360px) {
+    .gallery-event{
+        display: block;
+        margin-bottom: 350px;
+    }
+    .gallery-info{
+        width: 300px;
+        margin-top: -45px;
+    }
+   
+
+}
+ 

@@ -1,0 +1,888 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 20px;
+}
+
+@font-face {
+  font-family: CaveatR;
+  src: url(../fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: CaveatB;
+  src: url(../fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: LatoIt;
+  src: url(../fonts/Lato-Italic.ttf);
+}
+@font-face {
+  font-family: LatoR;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+.site-container {
+  max-width: 1280px;
+  min-height: 800px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1100px;
+  min-height: 500px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  padding-top: 150px;
+}
+
+nav {
+  max-width: 1280px;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  /* background-color: green; */
+}
+
+.nav-holder {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  width: 250px;
+  height: 55px;
+  background-image: url(../images/logo.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.links {
+  margin-right: 50px;
+  font-family: CaveatR;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  /* vh is viewport height and width */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: height 0.4s, opacity 0.2s ease-in;
+  transition: height 0.4s, opacity 0.2s ease-in;
+  padding-bottom: 10px;
+}
+
+.links a {
+  margin-right: 10px;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+a.active {
+  border-bottom: solid 2px black;
+}
+
+#login {
+  width: 158px;
+  height: 52px;
+  font-size: 25px;
+  font-family: CaveatR;
+  background-color: #FFD972;
+  -webkit-box-shadow: 0 10px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 3px rgba(0, 0, 0, 0.16);
+  border-radius: 26px;
+  border: none;
+}
+
+.bars {
+  display: none;
+  margin-right: 30px;
+}
+
+.bars .bar {
+  display: block;
+  width: 25px;
+  margin: 5px 0;
+  background-color: black;
+  height: 3px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bars.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.bars.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.bars.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
+.heroMobile.active {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  .bars {
+    display: block;
+  }
+  .links {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* vh is viewport height and width */
+  }
+  .links.active {
+    width: 100%;
+    height: 100vh;
+    margin-top: 800px;
+    opacity: 1;
+    position: absolute;
+    left: auto;
+    right: auto;
+  }
+}
+.footer {
+  font-family: LatoIt;
+  font-size: 15px;
+  margin-top: -70px;
+  padding: 26px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footerLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footerLinks div {
+  margin-right: 26px;
+}
+
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.facebook {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/facebook.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 40px;
+}
+
+.instagram {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/instagram.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 360px) {
+  .footer {
+    padding-bottom: 10px;
+    display: block;
+  }
+  .footer .socials {
+    margin-top: -58px;
+    margin-left: 200px;
+  }
+  .footer .footerLinks {
+    margin-left: 20px;
+  }
+}
+.hero {
+  max-width: 100%;
+  min-height: 800px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(242, 92, 84, 0.4)), to(rgba(242, 92, 84, 0.4))), url(../images/hero.jpg);
+  background-image: linear-gradient(rgba(242, 92, 84, 0.4), rgba(242, 92, 84, 0.4)), url(../images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.callout {
+  padding-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.circle {
+  width: 360px;
+  height: 360px;
+  border-radius: 100%;
+  background-color: #FFD972;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  position: absolute;
+}
+
+.title {
+  font-size: 24px;
+  font-family: CaveatB;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.circle p {
+  width: 165px;
+  font-size: 13px;
+  font-family: LatoR;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+.subCircle {
+  width: 165px;
+  height: 165px;
+  border-radius: 100%;
+  background-color: #FCBCB8;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.16);
+  margin-top: -60px;
+  margin-left: 300px;
+  position: relative;
+}
+
+.subCircle p {
+  width: 105px;
+  margin-top: 60px;
+  margin-left: 40px;
+  font-family: LatoIt;
+  font-size: 10px;
+}
+
+.browseHero {
+  max-width: 100%;
+  min-height: 800px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(167, 232, 189, 0.6)), to(rgba(167, 232, 189, 0.6))), url(../images/recipe-hero.jpg);
+  background-image: linear-gradient(rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url(../images/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.browseTitle {
+  font-size: 25px;
+  font-family: CaveatB;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.gallery-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.gallery-event {
+  width: 55%;
+  height: 263px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gallery-image img {
+  width: 300px;
+  height: 263px;
+  border-radius: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallery-info {
+  min-width: 224px;
+  min-height: 100%;
+  border-radius: 24px;
+  background-color: white;
+}
+
+.gallery-details {
+  width: 130px;
+  height: 200px;
+  margin: 40px auto;
+}
+
+.gallery-title {
+  font-size: 15px;
+  font-family: LatoR;
+  border-bottom: 3px solid black;
+  margin-bottom: 20px;
+}
+
+.gallery-desc {
+  font-family: LatoR;
+  font-size: 9px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.timer .timer-image {
+  width: 23px;
+  height: 24px;
+  background-image: url(../images/time.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.timer p {
+  font-size: 10px;
+  font-family: LatoR;
+}
+
+.servings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.servings .servings-image {
+  width: 23px;
+  height: 24px;
+  background-image: url(../images/servings.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.servings p {
+  font-size: 10px;
+  font-family: LatoR;
+}
+
+@media screen and (max-width: 760px) {
+  .browseTitle {
+    text-align: center;
+  }
+  .gallery-list {
+    display: block;
+  }
+  .gallery-event {
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .gallery-event {
+    display: block;
+    margin-bottom: 350px;
+  }
+  .gallery-info {
+    width: 300px;
+    margin-top: -45px;
+  }
+}
+.loginHero {
+  max-width: 100%;
+  min-height: 800px;
+  background-color: #FFD972;
+}
+
+.login-forms {
+  width: 100%;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.login-form {
+  width: 25%;
+  height: 100%;
+}
+
+.login-title {
+  text-align: left;
+  font-size: 30px;
+  font-family: LatoR;
+  margin-bottom: 60px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: black solid 3px;
+  font-size: 12px;
+  font-family: LatoR;
+  margin-bottom: 50px;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+::-moz-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::-ms-input-placeholder {
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+
+.signup-form {
+  width: 35%;
+  height: 100%;
+}
+.signup-form p {
+  font-family: LatoIt;
+}
+
+#loginBtn {
+  width: 100%;
+  font-size: 25px;
+  font-family: CaveatR;
+  background-color: #FFD972;
+  -webkit-box-shadow: 0 10px 3px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 3px rgba(0, 0, 0, 0.16);
+  border-radius: 26px;
+  border: none;
+}
+
+@media screen and (max-width: 760px) {
+  .login-forms {
+    display: block;
+  }
+  .login-form {
+    margin: 0 auto;
+    margin-bottom: 115px;
+  }
+  .signup-form {
+    margin: 0 auto;
+    margin-bottom: 130px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .login-forms {
+    display: block;
+  }
+  .login-form {
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 115px;
+  }
+  .signup-form {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 130px;
+  }
+}
+.create-title {
+  font-family: CaveatB;
+  font-size: 25px;
+  margin-bottom: 75px;
+}
+
+.create-recipe-form {
+  margin-bottom: 127px;
+}
+
+.create-input {
+  font-size: 20px;
+  font-family: LatoR;
+  margin-bottom: 60px;
+}
+
+.more-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+}
+
+.attach {
+  width: 110px;
+  border: none;
+  background-color: #EFA7A7;
+  border-radius: 24px;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.3);
+  margin-top: -80px;
+  margin-left: -110px;
+  font-size: 17px;
+  font-family: CaveatR;
+}
+
+.plus {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 100%;
+  background-color: #EFA7A7;
+  margin-top: -80px;
+  margin-left: -38px;
+}
+
+.addH {
+  width: 5px;
+  height: 15px;
+  background-color: white;
+  margin-left: 16px;
+  margin-top: -5px;
+  position: absolute;
+}
+
+.addV {
+  width: 15px;
+  height: 5px;
+  background-color: white;
+  margin-left: 11px;
+}
+
+.ingredients-form {
+  margin-bottom: 130px;
+}
+
+.ingredient-title {
+  font-size: 20px;
+  font-family: LatoR;
+  margin-bottom: 35px;
+}
+
+.instructions-title {
+  font-size: 20px;
+  font-family: LatoR;
+  margin-bottom: 35px;
+}
+
+.create-recipe-btn {
+  width: 40%;
+  height: 52px;
+  margin-left: 30%;
+  background-color: #EFA7A7;
+  border-radius: 26px;
+  border: none;
+  font-size: 25px;
+  font-family: CaveatR;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-hero {
+  max-width: 100%;
+  min-height: 800px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(167, 232, 189, 0.6)), to(rgba(167, 232, 189, 0.6))), url(../images/recipe-hero.jpg);
+  background-image: linear-gradient(rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url(../images/recipe-hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.recipe-list-title {
+  font-size: 25px;
+  font-family: CaveatB;
+  margin-bottom: 50px;
+}
+
+.recipe-list {
+  width: 100%;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.your-recipe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recipe-event {
+  width: 55%;
+  min-height: 263px;
+  display: block;
+}
+
+.recipe-image {
+  width: 300px;
+  height: 263px;
+  border-radius: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../../images/recipe-pizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.recipe-info {
+  min-width: 224px;
+  min-height: 100%;
+  border-radius: 24px;
+  background-color: white;
+}
+
+.recipe-details {
+  width: 130px;
+  height: 200px;
+  margin: 40px auto;
+}
+
+.recipe-title {
+  font-size: 15px;
+  font-family: LatoR;
+  border-bottom: 3px solid black;
+  margin-bottom: 20px;
+}
+
+.recipe-desc {
+  font-family: LatoR;
+  font-size: 9px;
+  margin-bottom: 20px;
+}
+
+.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view {
+  display: none;
+  padding: 10px 40px;
+}
+
+.btn {
+  width: 125px;
+  height: 42px;
+  background-color: #FFD972;
+  border-radius: 26px;
+  border: none;
+  -webkit-box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 6px rgba(0, 0, 0, 0.2);
+  margin-left: 35px;
+  font-family: CaveatR;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.recipe-image:hover .view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.food {
+  width: 100%;
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.food-name {
+  rotate: -90deg;
+  margin-left: -580px;
+}
+
+.food-image {
+  width: 468px;
+  height: 421px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: -80px;
+  background-image: url(../images/recipe-pizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.full-desc {
+  width: 455px;
+  height: 110px;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-family: LatoR;
+  margin-bottom: 30px;
+}
+
+.sub-title p {
+  margin-bottom: 40px;
+}
+
+.ingredients {
+  margin-top: 60px;
+}
+
+.instructions {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+ol {
+  margin-left: 20px;
+}
+
+li {
+  font-size: 20px;
+  font-family: CaveatR;
+}
+
+.nonumber {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 760px) {
+  .food {
+    display: block;
+  }
+  .food-image {
+    margin: 0 170px;
+  }
+  .food-desc {
+    margin: 0 100px;
+  }
+  .ingredients {
+    margin: 0 100px;
+  }
+  .instructions {
+    margin: 0 100px;
+  }
+}

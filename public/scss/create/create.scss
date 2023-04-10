@@ -1,0 +1,79 @@
+.create-title{
+    font-family: CaveatB;
+    font-size: 25px;
+    margin-bottom: 75px;
+}
+.create-recipe-form{
+    margin-bottom: 127px;
+}
+.create-input{
+    font-size: 20px;
+    font-family: LatoR;
+    margin-bottom: 60px;
+}
+.more-items{
+    display: flex;
+    align-items: center;
+    justify-content:baseline;
+}
+.attach{
+    width: 110px;
+    border: none;
+    background-color: #EFA7A7;
+    border-radius: 24px;
+    box-shadow: 0 10px 6px rgb(0, 0, 0,.3) ;
+    margin-top: -80px;
+    margin-left: -110px;
+    font-size: 17px;
+    font-family: CaveatR;
+}
+.plus{
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius:100% ;
+    background-color: #EFA7A7;
+    margin-top: -80px;
+    margin-left: -38px;
+
+}
+.addH{
+    width:5px;
+    height: 15px;
+    background-color: white;
+    margin-left: 16px;
+    margin-top: -5px;
+    position: absolute;
+}
+.addV{
+    width:15px;
+    height: 5px;
+    background-color: white;
+    margin-left: 11px;
+    
+}
+.ingredients-form{
+    margin-bottom: 130px;
+}
+.ingredient-title{
+    font-size:20px ;
+    font-family: LatoR;
+    margin-bottom: 35px;
+}
+.instructions-title{
+    font-size:20px ;
+    font-family: LatoR;
+    margin-bottom: 35px;
+}
+.create-recipe-btn{
+    width: 40%;
+    height: 52px;
+    margin-left: 30%;
+
+    background-color: #EFA7A7;
+    border-radius:26px ;
+    border: none;
+    font-size: 25px;
+    font-family: CaveatR;
+    box-shadow: 0 10px 6px rgb(0, 0, 0,.3);
+}

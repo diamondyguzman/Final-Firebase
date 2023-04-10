@@ -1,0 +1,83 @@
+.loginHero{
+    max-width: 100%;
+    min-height: 800px;
+    background-color: #FFD972;
+}
+.login-forms{
+    width: 100%;
+    min-height: 500px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.login-form{
+    width: 25%;
+    height: 100%;
+   
+}
+.login-title{
+    text-align: left;
+    font-size: 30px;
+    font-family: LatoR;
+    margin-bottom: 60px;
+}
+input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: black solid 3px ;
+    font-size: 12px;
+    font-family: LatoR;
+    margin-bottom: 50px;
+}
+::placeholder{
+    color: black;
+}
+.signup-form{
+    width: 35%;
+    height: 100%;
+  
+    p{
+        font-family: LatoIt;
+    }
+}
+#loginBtn{
+    width: 100%;
+    font-size: 25px;
+    font-family: CaveatR;
+    background-color: #FFD972;
+    box-shadow:0 10px 3px rgb(0, 0, 0, .16) ;
+    border-radius: 26px;
+    border: none;
+}
+@media screen and (max-width:760px) {
+    .login-forms{
+        display: block;
+    
+    }
+    .login-form{
+        margin: 0 auto;
+        margin-bottom:115px ;
+    }
+    .signup-form{
+        margin: 0 auto;
+        margin-bottom:130px ;
+    }
+}
+@media screen and (max-width:360px) {
+    .login-forms{
+        display: block;
+    
+    }
+    .login-form{
+        margin: 0 auto;
+        width: 50%;
+        margin-bottom:115px ;
+    }
+    .signup-form{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom:130px ;
+    }
+}

@@ -1,0 +1,94 @@
+.recipe-hero{
+    max-width: 100%;
+    min-height: 800px;
+    background-image: linear-gradient(rgb(167, 232, 189,.6),rgb(167, 232, 189,.6)), url(../images/recipe-hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.recipe-list-title{
+    font-size: 25px;
+    font-family: CaveatB;
+    margin-bottom: 50px;
+}
+.recipe-list{
+    width:100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+} 
+.your-recipe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recipe-event{
+    width: 55%;
+    min-height: 263px;
+    display:block ;
+}
+.recipe-image  {
+    width:300px;
+    height: 263px;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../images/recipe-pizza.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.recipe-info{           
+    min-width: 224px;
+    min-height: 100%;
+    border-radius: 24px;
+    background-color: white;
+}
+.recipe-details{
+    width: 130px;
+    height: 200px;
+    margin: 40px auto;  
+}
+
+.recipe-title{
+    font-size: 15px;
+    font-family: LatoR;
+    border-bottom: 3px solid black;
+    margin-bottom: 20px;
+}
+.recipe-desc{
+    font-family: LatoR;
+    font-size: 9px;
+    margin-bottom: 20px;
+}
+.bottom{
+   display: flex;
+}
+.view{
+    display: none;
+    padding:10px  40px;
+}
+.btn{
+    width: 125px;
+    height: 42px;
+    background-color: #FFD972;
+    border-radius: 26px;
+    border: none;
+    box-shadow: 0 10px 6px rgb(0, 0, 0,.2);
+    margin-left:35px;
+    font-family: CaveatR;
+    font-size: 19px;
+    cursor: pointer;
+}
+a{
+text-decoration: none;
+color: black;
+}
+
+.recipe-image:hover .view {
+ display: flex;
+}

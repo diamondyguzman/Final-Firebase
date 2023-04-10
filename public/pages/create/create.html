@@ -1,0 +1,96 @@
+<section class="create">
+  <div class="wrapper">
+    <div class="create-recipe-form">
+      <div class="create-title">
+        Hey <span class="name"></span>, create your recipe!
+      </div>
+      <div class="more-items">
+        <input
+          id="recipeImage"
+          class="create-input"
+          type="file"
+          placeholder="Add Recipe Image"
+          accept="image/*"
+        />
+        <button class="attach">Attach File</button>
+      </div>
+      <input
+        id="listName"
+        class="create-input"
+        type="text"
+        placeholder="Recipe Name "
+      />
+      <input
+        id="listDesc"
+        class="create-input"
+        type="text"
+        placeholder="Recipe Description"
+      />
+      <input
+        id="listTime"
+        class="create-input"
+        type="text"
+        placeholder="Recipe Total Time"
+      />
+      <input
+        id="listServing"
+        class="create-input"
+        type="text"
+        placeholder="Recipe Serving Size"
+      />
+    </div>
+    <div class="create-recipe-form">
+      <div class="ingredient-title">Enter Ingredients:</div>
+      <input
+        id="ingredient"
+        class="create-input"
+        type="text"
+        placeholder="Ingredient #1"
+      />
+      <input
+        id="ingredient"
+        class="create-input"
+        type="text"
+        placeholder="Ingredient #2"
+      />
+
+      <div class="more-items">
+        <input
+          id="ingredient"
+          class="create-input"
+          type="text"
+          placeholder="Ingredient #3"
+        />
+        <button class="plus">
+          <div class="addH"></div>
+          <div class="addV"></div>
+        </button>
+      </div>
+    </div>
+    <div class="create-recipe-form">
+      <div class="instructions-title">Enter Instructions:</div>
+      <input
+        id="instruction"
+        class="create-input"
+        type="text"
+        placeholder="Instruction #1"
+      />
+      <input
+        id="instruction"
+        class="create-input"
+        type="text"
+        placeholder="Instruction #2"
+      />
+      <div class="more-items">
+        <input class="create-input" type="text" placeholder="Ingredient #3" />
+        <button class="plus">
+          <div class="addH"></div>
+          <div class="addV"></div>
+        </button>
+      </div>
+    </div>
+    <button onclick="addMainList()" class="create-recipe-btn">
+      Create Recipe
+    </button>
+  </div>
+</section>

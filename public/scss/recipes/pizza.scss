@@ -1,0 +1,76 @@
+.food{
+    width:100%;
+    min-height: 300px;
+    display: flex;
+    //align-items: center;
+    justify-content:space-around;
+}
+.food-name{
+    rotate: -90deg;
+    margin-left:-580px;
+   
+}
+.food-image {
+    width:468px;
+    height: 421px;
+    object-fit: cover;
+    margin-left: -80px;
+    background-image: url(../images/recipe-pizza.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.full-desc{
+    width: 455px;
+    height: 110px;
+ 
+}
+.sub-title{
+    font-size: 20px;
+    font-family: LatoR;
+    margin-bottom: 30px;
+}
+.sub-title p {
+    margin-bottom: 40px;
+}
+.ingredients{
+    margin-top: 60px;
+
+}
+.instructions{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+ol{
+    margin-left: 20px;
+}
+li{
+    font-size:20px;
+    font-family: CaveatR;
+    
+}
+.nonumber{
+    list-style-type: none;
+}
+@media screen and (max-width:760px){
+    .food{
+        display: block;
+    }
+    
+    .food-image{
+        margin: 0 170px;
+    }
+    .food-desc{
+        margin: 0 100px;
+    }
+    .ingredients{
+        margin: 0 100px;
+    }
+    .instructions{
+        margin: 0 100px;
+    }
+    
+}
